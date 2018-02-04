@@ -1,6 +1,7 @@
+/*
 MIT License
 
-Copyright (c) 2018 SuperIlu <superilu@yahoo.com>
+Copyright (c) 2018 Andre Seidelt <superilu@yahoo.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +20,20 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+ */
+
+/**
+ * These functions must be implemented for block access.
+ */
+#ifndef __BLOCKIO_H__
+#define __BLOCKIO_H__
+
+#include "config.h"
+#include "z80fs.h"
+
+extern bool clearBlock(block_t block_num);
+extern bool getBlockType(block_t block_num, uint8_t *type);
+extern bool readBlock(block_t block_num, uint8_t *dst);
+extern bool writeBlock(block_t block_num, uint8_t *src);
+
+#endif /* __BLOCKIO_H__ */

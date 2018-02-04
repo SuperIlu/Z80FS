@@ -1,6 +1,7 @@
+/*
 MIT License
 
-Copyright (c) 2018 SuperIlu <superilu@yahoo.com>
+Copyright (c) 2018 Andre Seidelt <superilu@yahoo.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +20,14 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+ */
+#ifndef __CONFIG_H__
+#define __CONFIG_H__
+
+// file system settings
+#define FIRST_BLOCK 1
+#define NUM_BLOCKS 512
+#define BLOCK_SIZE Z80FS_BS64
+#define BYTE_BLOCK_SIZE Z80FS_GET_BLOCKSIZE(BLOCK_SIZE)
+
+#endif /* __CONFIG_H__ */
